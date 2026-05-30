@@ -263,7 +263,7 @@ p  { font-size: 1rem; color: var(--grey); }
   position: relative;
   display: flex; align-items: center;
   overflow: hidden;
-  padding: 160px 0 80px; /* extra for ticker + nav */
+  padding: 160px 0 80px;
 }
 
 /* Animated grid background */
@@ -328,12 +328,10 @@ p  { font-size: 1rem; color: var(--grey); }
   margin-top: 4px;
 }
 
-/* Hero Illustration — anchored to bottom so truck fills the frame */
+/* Hero Illustration — full height, truck+road pushed to bottom via flex */
 .hero-visual {
-  position: absolute; right: 0; bottom: 0; top: auto;
-  height: 72%;
-  width: 52%; display: flex; align-items: flex-end; justify-content: center;
-  z-index: 2;
+  position: absolute; right: 0; bottom: 0; top: 0;
+  width: 52%; z-index: 2; overflow: hidden;
 }
 
 /* SVG truck illustration */
@@ -341,8 +339,6 @@ p  { font-size: 1rem; color: var(--grey); }
   width: 100%; height: 100%;
   display: flex; align-items: center; justify-content: center;
 }
-
-/* .ticker removed — replaced by .top-ticker fixed bar in nav */
 
 /* ── About Strip ──────────────────────────────────────────── */
 .about-strip {
@@ -677,7 +673,7 @@ footer {
 /* ── Page Hero (inner pages) ──────────────────────────────── */
 .page-hero {
   background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy-mid) 100%);
-  padding: 160px 0 70px; /* ticker 40px + nav ~76px + breathing room */
+  padding: 160px 0 70px;
   position: relative; overflow: hidden; text-align: center;
 }
 .page-hero::before {
@@ -899,7 +895,15 @@ textarea { min-height: 130px; resize: vertical; }
   .service-detail { grid-template-columns: 1fr; }
   .service-detail:nth-child(even) .service-detail-visual { order: unset; }
   .values-grid { grid-template-columns: 1fr 1fr; }
-  .hero-visual { display: none; }
+  .hero {
+    padding-bottom: 240px; /* room for full-width truck scene at bottom */
+    align-items: flex-start;
+  }
+  .hero-visual {
+    display: block;
+    width: 100%; height: 240px;
+    top: auto; left: 0; right: 0; bottom: 0;
+  }
   .hero-content { max-width: 100%; }
 }
 
