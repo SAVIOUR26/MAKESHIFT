@@ -56,48 +56,32 @@
       <!-- Contact -->
       <div class="footer-col">
         <h5>Contact Us</h5>
-
         <div class="footer-contact-item">
           <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-          <div class="info">
-            <strong>Office Address</strong>
-            Kiwatule, Nakawa Division<br>Kampala, Central Uganda
-          </div>
+          <div class="info"><strong>Office Address</strong>Kiwatule, Nakawa Division<br>Kampala, Central Uganda</div>
         </div>
-
         <div class="footer-contact-item">
           <div class="icon"><i class="fas fa-envelope"></i></div>
-          <div class="info">
-            <strong>Email Us</strong>
-            info@makeshiftlogistics.com
-          </div>
+          <div class="info"><strong>Email Us</strong>info@makeshiftlogistics.com</div>
         </div>
-
         <div class="footer-contact-item">
           <div class="icon"><i class="fas fa-mail-bulk"></i></div>
-          <div class="info">
-            <strong>Postal Address</strong>
-            P.O. Box 191331, Kampala GPO
-          </div>
+          <div class="info"><strong>Postal Address</strong>P.O. Box 191331, Kampala GPO</div>
         </div>
-
       </div>
 
-    </div><!-- /footer-grid -->
-  </div><!-- /container -->
+    </div>
+  </div>
 
   <div class="container">
     <div class="footer-bottom">
-      <p>&copy; <?= date('Y') ?> <a href="index.php">Makeshift Logistics (U) Limited</a>. All rights reserved. Reg. No. G250708-3181</p>
-      <p>Incorporated under <a href="#">The Companies Act, 2012</a> &mdash; Republic of Uganda</p>
+      <p>&copy; <?= date('Y') ?> <a href="index.php">Makeshift Logistics (U) Limited</a>. All rights reserved.</p>
+      <p>Powered by <a href="https://thirdsan.com/" target="_blank" rel="noopener">Thirdsan</a> &mdash; Building the Next Gen Digital Africa</p>
     </div>
   </div>
 </footer>
 
-<!-- Scroll-to-top -->
 <button id="scrollTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
-
-<!-- JS -->
 <script src="js/main.js"></script>
 </body>
 </html>
