@@ -314,10 +314,10 @@ require 'includes/nav.php';
       to   { transform: translateX(-140px); }
     }
 
-    /* Truck — sits on top of road in the group */
+    /* Truck — fills full width of the visual panel */
     .truck-anim {
-      width: 96%; max-width: 520px;
-      margin-bottom: -6px; /* tuck wheels into road top */
+      width: 100%;
+      margin-bottom: -8px; /* tuck wheels into road top */
       animation: truckBounce 0.35s ease-in-out infinite alternate,
                  truckEntry  1.2s cubic-bezier(.22,1,.36,1) both;
     }

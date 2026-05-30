@@ -328,10 +328,11 @@ p  { font-size: 1rem; color: var(--grey); }
   margin-top: 4px;
 }
 
-/* Hero Illustration */
+/* Hero Illustration — anchored to bottom so truck fills the frame */
 .hero-visual {
-  position: absolute; right: 0; top: 0; bottom: 0;
-  width: 52%; display: flex; align-items: center; justify-content: center;
+  position: absolute; right: 0; bottom: 0; top: auto;
+  height: 72%;
+  width: 52%; display: flex; align-items: flex-end; justify-content: center;
   z-index: 2;
 }
 
