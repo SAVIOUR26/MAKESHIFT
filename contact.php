@@ -35,7 +35,7 @@ require 'includes/nav.php';
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb">
-      <a href="index.php">Home</a>
+      <a href="/">Home</a>
       <i class="fas fa-chevron-right"></i>
       <span>Contact Us</span>
     </div>

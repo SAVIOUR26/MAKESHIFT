@@ -32,10 +32,10 @@ require 'includes/nav.php';
       </p>
 
       <div class="hero-actions">
-        <a href="services.php" class="btn btn-primary btn-lg">
+        <a href="/services" class="btn btn-primary btn-lg">
           <i class="fas fa-boxes-stacked"></i> Explore Services
         </a>
-        <a href="contact.php" class="btn btn-outline btn-lg">
+        <a href="/contact" class="btn btn-outline btn-lg">
           <i class="fas fa-paper-plane"></i> Get a Quote
         </a>
       </div>
@@ -466,7 +466,7 @@ require 'includes/nav.php';
           <li><i class="fas fa-circle-check"></i> Fully compliant with Uganda Revenue Authority &amp; customs regulations</li>
           <li><i class="fas fa-circle-check"></i> Dedicated fleet and partner network for reliable last-mile delivery</li>
         </ul>
-        <a href="about.php" class="btn btn-navy">
+        <a href="/about" class="btn btn-navy">
           <i class="fas fa-arrow-right"></i> Learn More About Us
         </a>
       </div>
@@ -503,7 +503,7 @@ require 'includes/nav.php';
         <div class="service-icon"><i class="<?= $icon ?>"></i></div>
         <h3><?= $title ?></h3>
         <p><?= $desc ?></p>
-        <a href="services.php" class="learn-more">
+        <a href="/services" class="learn-more">
           Learn More <i class="fas fa-arrow-right"></i>
         </a>
       </div>
@@ -665,10 +665,10 @@ require 'includes/nav.php';
     <h2>Ready to Move Your Business Forward?</h2>
     <p>Contact Makeshift Logistics today for a free quote and discover how we can streamline your supply chain across Uganda.</p>
     <div class="actions">
-      <a href="contact.php" class="btn btn-primary btn-lg">
+      <a href="/contact" class="btn btn-primary btn-lg">
         <i class="fas fa-paper-plane"></i> Get a Free Quote
       </a>
-      <a href="services.php" class="btn btn-outline btn-lg">
+      <a href="/services" class="btn btn-outline btn-lg">
         <i class="fas fa-boxes-stacked"></i> View All Services
       </a>
     </div>

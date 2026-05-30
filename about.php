@@ -9,7 +9,7 @@ require 'includes/nav.php';
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb">
-      <a href="index.php">Home</a>
+      <a href="/">Home</a>
       <i class="fas fa-chevron-right"></i>
       <span>About Us</span>
     </div>
@@ -226,8 +226,8 @@ require 'includes/nav.php';
     <h2>Partner with Uganda's Trusted Logistics Team</h2>
     <p>Experience the Makeshift difference — professional, reliable, and built for your business.</p>
     <div class="actions">
-      <a href="contact.php" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Get in Touch</a>
-      <a href="services.php" class="btn btn-outline btn-lg"><i class="fas fa-boxes-stacked"></i> Our Services</a>
+      <a href="/contact" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Get in Touch</a>
+      <a href="/services" class="btn btn-outline btn-lg"><i class="fas fa-boxes-stacked"></i> Our Services</a>
     </div>
   </div>
 </section>

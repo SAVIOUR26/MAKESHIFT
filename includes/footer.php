@@ -4,7 +4,7 @@
 
       <!-- Brand column -->
       <div class="footer-brand">
-        <a href="index.php" class="logo">
+        <a href="/" class="logo">
           <div class="logo-mark">
             <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect x="2" y="10" width="16" height="10" rx="2" fill="white" opacity=".95"/>
@@ -32,11 +32,11 @@
       <div class="footer-col">
         <h5>Quick Links</h5>
         <ul>
-          <li><a href="index.php"><i class="fas fa-chevron-right"></i>Home</a></li>
-          <li><a href="about.php"><i class="fas fa-chevron-right"></i>About Us</a></li>
-          <li><a href="services.php"><i class="fas fa-chevron-right"></i>Our Services</a></li>
-          <li><a href="contact.php"><i class="fas fa-chevron-right"></i>Contact Us</a></li>
-          <li><a href="contact.php"><i class="fas fa-chevron-right"></i>Get a Quote</a></li>
+          <li><a href="/"><i class="fas fa-chevron-right"></i>Home</a></li>
+          <li><a href="/about"><i class="fas fa-chevron-right"></i>About Us</a></li>
+          <li><a href="/services"><i class="fas fa-chevron-right"></i>Our Services</a></li>
+          <li><a href="/contact"><i class="fas fa-chevron-right"></i>Contact Us</a></li>
+          <li><a href="/contact"><i class="fas fa-chevron-right"></i>Get a Quote</a></li>
         </ul>
       </div>
 
@@ -44,12 +44,12 @@
       <div class="footer-col">
         <h5>Services</h5>
         <ul>
-          <li><a href="services.php"><i class="fas fa-chevron-right"></i>Freight &amp; Cargo</a></li>
-          <li><a href="services.php"><i class="fas fa-chevron-right"></i>Warehousing</a></li>
-          <li><a href="services.php"><i class="fas fa-chevron-right"></i>Supply Chain</a></li>
-          <li><a href="services.php"><i class="fas fa-chevron-right"></i>Last-Mile Delivery</a></li>
-          <li><a href="services.php"><i class="fas fa-chevron-right"></i>General Supplies</a></li>
-          <li><a href="services.php"><i class="fas fa-chevron-right"></i>Customs Clearance</a></li>
+          <li><a href="/services"><i class="fas fa-chevron-right"></i>Freight &amp; Cargo</a></li>
+          <li><a href="/services"><i class="fas fa-chevron-right"></i>Warehousing</a></li>
+          <li><a href="/services"><i class="fas fa-chevron-right"></i>Supply Chain</a></li>
+          <li><a href="/services"><i class="fas fa-chevron-right"></i>Last-Mile Delivery</a></li>
+          <li><a href="/services"><i class="fas fa-chevron-right"></i>General Supplies</a></li>
+          <li><a href="/services"><i class="fas fa-chevron-right"></i>Customs Clearance</a></li>
         </ul>
       </div>
 
@@ -88,7 +88,7 @@
 
   <div class="container">
     <div class="footer-bottom">
-      <p>&copy; <?= date('Y') ?> <a href="index.php">Makeshift Logistics (U) Limited</a>. All rights reserved.</p>
+      <p>&copy; <?= date('Y') ?> <a href="/">Makeshift Logistics (U) Limited</a>. All rights reserved.</p>
       <p>Powered by <a href="https://thirdsan.com/" target="_blank" rel="noopener">Thirdsan</a> &mdash; Building the Next Gen Digital Africa</p>
     </div>
   </div>
