@@ -261,11 +261,11 @@ require 'includes/nav.php';
     .scene-wrap {
       width: 100%; height: 100%;
       display: flex; flex-direction: column;
-      align-items: flex-end; justify-content: flex-end;
+      align-items: stretch; justify-content: flex-end;
       position: relative; overflow: hidden;
     }
     .skyline {
-      position: absolute; bottom: 90px; left: 0; right: 0;
+      position: absolute; bottom: 60px; left: 0; right: 0;
       width: 100%; pointer-events: none;
     }
 
@@ -306,22 +306,22 @@ require 'includes/nav.php';
       to   { transform: translateX(-140px); }
     }
 
-    /* Truck */
+    /* Truck — vertically centered in hero visual */
     .truck-anim {
       position: absolute;
-      bottom: 22px; left: 50%;
-      transform: translateX(-55%);
-      width: 85%; max-width: 420px;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -38%);
+      width: 92%; max-width: 460px;
       animation: truckBounce 0.35s ease-in-out infinite alternate,
                  truckEntry  1.2s cubic-bezier(.22,1,.36,1) both;
     }
     @keyframes truckEntry {
-      from { transform: translateX(-55%) translateX(120%); opacity: 0; }
-      to   { transform: translateX(-55%); opacity: 1; }
+      from { transform: translate(80%, -38%); opacity: 0; }
+      to   { transform: translate(-50%, -38%); opacity: 1; }
     }
     @keyframes truckBounce {
-      from { transform: translateX(-55%) translateY(0px); }
-      to   { transform: translateX(-55%) translateY(-3px); }
+      from { transform: translate(-50%, -38%); }
+      to   { transform: translate(-50%, -41%); }
     }
 
     /* Wheel spin */
@@ -369,26 +369,6 @@ require 'includes/nav.php';
   </style>
 
 </section>
-
-<!-- ═══════════════════════════════════════════════════════════
-     TICKER
-════════════════════════════════════════════════════════════ -->
-<div class="ticker">
-  <div class="ticker-inner">
-    <?php
-    $items = [
-      'Freight Transportation','Warehousing & Storage','Supply Chain Management',
-      'Last-Mile Delivery','General Supplies','Customs Clearance','Fleet Services',
-      'Freight Transportation','Warehousing & Storage','Supply Chain Management',
-      'Last-Mile Delivery','General Supplies','Customs Clearance','Fleet Services',
-    ];
-    foreach ($items as $item):
-    ?>
-    <span class="ticker-item"><i class="fas fa-truck"></i><?= $item ?></span>
-    <?php endforeach; ?>
-  </div>
-</div>
-
 
 <!-- ═══════════════════════════════════════════════════════════
      ABOUT STRIP
