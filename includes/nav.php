@@ -3,7 +3,7 @@ $uri  = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 $page = $uri === '' ? 'home' : $uri;
 ?>
 
-<!-- ── Permanent Top Ticker Bar ───────────────────────────── -->
+<!-- ── Permanent Top Ticker Bar ──────────────────────────────────────── -->
 <div class="top-ticker" id="topTicker">
   <div class="top-ticker-inner">
     <?php
