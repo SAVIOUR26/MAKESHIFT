@@ -8,7 +8,7 @@ require 'includes/nav.php';
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb">
-      <a href="index.php">Home</a>
+      <a href="/">Home</a>
       <i class="fas fa-chevron-right"></i>
       <span>About Us</span>
     </div>
@@ -23,21 +23,9 @@ require 'includes/nav.php';
       <div class="about-text fade-up">
         <div class="eyebrow-tag"><i class="fas fa-book-open"></i> Our Story</div>
         <h2>Born from a Need, Built for Impact</h2>
-        <p class="lead">
-          Makeshift Logistics (U) Limited was founded with a clear vision: to plug the gaps in Uganda's
-          logistics landscape with reliable, affordable, and professional services that businesses
-          and communities across East Africa can truly depend on.
-        </p>
-        <p>
-          Headquartered at Kiwatule, Nakawa Division in Kampala — Central Uganda — we serve businesses,
-          NGOs, government institutions, and individual clients who need more than just a delivery
-          service. They need a partner who understands the terrain, the regulations, and the urgency
-          of business in East Africa.
-        </p>
-        <p>
-          Our name reflects our philosophy: resourceful, adaptive, and effective. We find solutions
-          where others see obstacles, and we deliver results where others make excuses.
-        </p>
+        <p class="lead">Makeshift Logistics (U) Limited was founded with a clear vision: to plug the gaps in Uganda's logistics landscape with reliable, affordable, and professional services that businesses and communities across East Africa can truly depend on.</p>
+        <p>Headquartered at Kiwatule, Nakawa Division in Kampala — Central Uganda — we serve businesses, NGOs, government institutions, and individual clients who need more than just a delivery service. They need a partner who understands the terrain, the regulations, and the urgency of business in East Africa.</p>
+        <p>Our name reflects our philosophy: resourceful, adaptive, and effective. We find solutions where others see obstacles, and we deliver results where others make excuses.</p>
         <div style="margin-top:28px;display:flex;gap:14px;flex-wrap:wrap;">
           <div style="background:var(--offwhite);border-radius:var(--radius);padding:20px 24px;flex:1;min-width:140px;text-align:center;">
             <div style="font-family:var(--font-head);font-size:2rem;font-weight:800;color:var(--orange);">2025</div>
@@ -61,21 +49,19 @@ require 'includes/nav.php';
             <polyline points="180,280 150,240 110,200 90,160" stroke="#4A90D9" stroke-width="2.5" stroke-dasharray="6,4" opacity=".7"/>
             <polyline points="180,280 200,260 240,250 270,240" stroke="#F47920" stroke-width="2" stroke-dasharray="6,4" opacity=".5"/>
             <circle cx="180" cy="280" r="14" fill="#F47920" opacity=".9"/>
-            <circle cx="180" cy="280" r="7"  fill="white"/>
+            <circle cx="180" cy="280" r="7" fill="white"/>
             <text x="180" y="304" text-anchor="middle" font-family="Arial" font-size="11" fill="rgba(255,255,255,.9)" font-weight="700">KAMPALA</text>
             <text x="180" y="317" text-anchor="middle" font-family="Arial" font-size="9" fill="rgba(244,121,32,.8)">(HQ)</text>
             <circle cx="280" cy="130" r="7" fill="rgba(74,144,217,.7)" stroke="rgba(255,255,255,.4)" stroke-width="1.5"/>
             <text x="295" y="134" font-family="Arial" font-size="9" fill="rgba(255,255,255,.7)">Gulu</text>
-            <circle cx="90"  cy="160" r="7" fill="rgba(74,144,217,.7)" stroke="rgba(255,255,255,.4)" stroke-width="1.5"/>
-            <text x="60"  y="157" font-family="Arial" font-size="9" fill="rgba(255,255,255,.7)">Fort Portal</text>
+            <circle cx="90" cy="160" r="7" fill="rgba(74,144,217,.7)" stroke="rgba(255,255,255,.4)" stroke-width="1.5"/>
+            <text x="60" y="157" font-family="Arial" font-size="9" fill="rgba(255,255,255,.7)">Fort Portal</text>
             <circle cx="270" cy="240" r="7" fill="rgba(74,144,217,.7)" stroke="rgba(255,255,255,.4)" stroke-width="1.5"/>
             <text x="280" y="243" font-family="Arial" font-size="9" fill="rgba(255,255,255,.7)">Jinja</text>
             <circle cx="220" cy="200" r="7" fill="rgba(74,144,217,.7)" stroke="rgba(255,255,255,.4)" stroke-width="1.5"/>
             <text x="228" y="196" font-family="Arial" font-size="9" fill="rgba(255,255,255,.7)">Mbale</text>
             <circle cx="150" cy="240" r="6" fill="rgba(74,144,217,.6)" stroke="rgba(255,255,255,.3)" stroke-width="1"/>
             <text x="120" y="255" font-family="Arial" font-size="9" fill="rgba(255,255,255,.6)">Masaka</text>
-            <text x="222" y="228" font-family="Arial" font-size="14" fill="#F47920" opacity=".9">&#x1F69A;</text>
-            <text x="130" y="218" font-family="Arial" font-size="12" fill="#4A90D9" opacity=".8">&#x1F69B;</text>
             <text x="180" y="22" text-anchor="middle" font-family="Arial Black" font-size="12" font-weight="900" fill="rgba(255,255,255,.4)" letter-spacing="4">COVERAGE MAP</text>
           </svg>
           <div style="position:absolute;width:60px;height:60px;border-radius:50%;border:2px solid rgba(244,121,32,.4);animation:pulse 2s ease-in-out infinite;bottom:72px;left:50%;transform:translateX(-50%);"></div>
@@ -170,8 +156,8 @@ require 'includes/nav.php';
     <h2>Partner with Uganda's Trusted Logistics Team</h2>
     <p>Experience the Makeshift difference — professional, reliable, and built for your business.</p>
     <div class="actions">
-      <a href="contact.php" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Get in Touch</a>
-      <a href="services.php" class="btn btn-outline btn-lg"><i class="fas fa-boxes-stacked"></i> Our Services</a>
+      <a href="/contact" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Get in Touch</a>
+      <a href="/services" class="btn btn-outline btn-lg"><i class="fas fa-boxes-stacked"></i> Our Services</a>
     </div>
   </div>
 </section>

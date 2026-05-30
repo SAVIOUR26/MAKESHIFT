@@ -1,0 +1,20 @@
+Options -Indexes
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Remove trailing slash (except root)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# Clean URL rewrites — map /page to /page.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^about$    about.php    [L]
+RewriteRule ^services$ services.php [L]
+RewriteRule ^contact$  contact.php  [L]
+
+# Custom error pages
+ErrorDocument 404 /index.php
