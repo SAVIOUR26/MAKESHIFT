@@ -261,7 +261,7 @@ require 'includes/nav.php';
 
   <!-- Animated hero styles -->
   <style>
-    /* Scene wrapper — flex col pushes truck+road to bottom */
+    /* Scene wrapper — flex col so truck+road naturally sit at bottom */
     .scene-wrap {
       width: 100%; height: 100%;
       position: relative; overflow: hidden;
@@ -272,7 +272,7 @@ require 'includes/nav.php';
       width: 100%; pointer-events: none;
     }
 
-    /* Truck + road as normal-flow unit, no absolute positioning */
+    /* Truck + road as a normal-flow unit at the bottom */
     .truck-road-group {
       width: 100%; flex-shrink: 0;
       display: flex; flex-direction: column; align-items: center;
@@ -315,10 +315,10 @@ require 'includes/nav.php';
       to   { transform: translateX(-140px); }
     }
 
-    /* Truck — fills full width, overlaps road top by 16px */
+    /* Truck — fills full width of the visual panel */
     .truck-anim {
       width: 100%;
-      margin-bottom: -16px;
+      margin-bottom: -16px; /* tuck wheels into road top */
       animation: truckBounce 0.35s ease-in-out infinite alternate,
                  truckEntry  1.2s cubic-bezier(.22,1,.36,1) both;
     }
@@ -426,8 +426,8 @@ require 'includes/nav.php';
             <polygon points="200,0 225,8 200,16" fill="#F47920" opacity=".8"/>
           </svg>
           <div class="about-badge">
-            <div class="num">2025</div>
-            <div class="lbl">Est. Kampala</div>
+            <div class="num">Est. 2025</div>
+            <div class="lbl">Kampala, Uganda</div>
           </div>
         </div>
       </div>
@@ -436,7 +436,7 @@ require 'includes/nav.php';
         <div class="eyebrow-tag">
           <i class="fas fa-award"></i> About Makeshift Logistics
         </div>
-        <h2>Uganda's Reliable Logistics &amp; Supply Partner</h2>
+        <h2>Uganda's Reliable Logistics & Supply Partner</h2>
         <p class="lead">
           Makeshift Logistics (U) Limited was founded with a singular commitment:
           to provide businesses across Uganda and East Africa with dependable,
@@ -445,7 +445,7 @@ require 'includes/nav.php';
         <p>
           Headquartered in Kiwatule, Nakawa Division, Kampala, we combine local
           expertise with modern logistics practices to serve our clients with
-          integrity and precision &mdash; whether it's a single pallet or a full fleet movement.
+          integrity and precision — whether it's a single pallet or a full fleet movement.
         </p>
         <ul class="check-list">
           <li><i class="fas fa-circle-check"></i> Registered under The Companies Act 2012, Republic of Uganda</li>
@@ -539,7 +539,7 @@ require 'includes/nav.php';
     <div class="section-header fade-up">
       <div class="eyebrow"><i class="fas fa-star"></i> Why Makeshift</div>
       <h2>The Makeshift Difference</h2>
-      <p>We don't just move cargo &mdash; we build lasting partnerships built on trust, speed, and results.</p>
+      <p>We don't just move cargo — we build lasting partnerships built on trust, speed, and results.</p>
     </div>
 
     <div class="grid-4">
@@ -552,7 +552,7 @@ require 'includes/nav.php';
         ['fas fa-network-wired',  'Wide Coverage',          'An expansive network covering Kampala and districts throughout Uganda for reliable reach.'],
         ['fas fa-leaf',           'Compliant Operations',   'Fully licensed, URA-registered, and operating in compliance with all Ugandan logistics regulations.'],
         ['fas fa-handshake',      'Trusted Partnerships',   'We work as an extension of your team, not just a vendor. Long-term relationships are our goal.'],
-        ['fas fa-chart-line',     'Scalable Solutions',     'From SMEs to large enterprises &mdash; our services scale with your business as you grow.'],
+        ['fas fa-chart-line',     'Scalable Solutions',     'From SMEs to large enterprises — our services scale with your business as you grow.'],
       ];
       foreach ($reasons as [$icon,$title,$desc]):
       ?>

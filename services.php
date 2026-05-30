@@ -9,7 +9,7 @@ require 'includes/nav.php';
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb">
-      <a href="index.php">Home</a>
+      <a href="/">Home</a>
       <i class="fas fa-chevron-right"></i>
       <span>Services</span>
     </div>
@@ -51,7 +51,7 @@ require 'includes/nav.php';
             <i class="fas fa-circle-check" style="color:var(--orange);"></i>24/7 Operations Support
           </div>
         </div>
-        <a href="contact.php" class="btn btn-primary" style="margin-top:28px;">
+        <a href="/contact" class="btn btn-primary" style="margin-top:28px;">
           <i class="fas fa-paper-plane"></i> Get a Custom Quote
         </a>
       </div>
@@ -222,7 +222,7 @@ require 'includes/nav.php';
           <span class="pill"><?= $pill ?></span>
           <?php endforeach; ?>
         </div>
-        <a href="contact.php" class="btn btn-primary">
+        <a href="/contact" class="btn btn-primary">
           <i class="fas fa-paper-plane"></i> Request This Service
         </a>
       </div>
@@ -274,7 +274,7 @@ require 'includes/nav.php';
     <h2>Need a Logistics Solution?</h2>
     <p>Tell us your requirements and we'll design the perfect logistics plan for your business.</p>
     <div class="actions">
-      <a href="contact.php" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Request a Quote</a>
+      <a href="/contact" class="btn btn-primary btn-lg"><i class="fas fa-paper-plane"></i> Request a Quote</a>
     </div>
   </div>
 </section>

@@ -3,7 +3,7 @@ $uri  = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 $page = $uri === '' ? 'home' : $uri;
 ?>
 
-<!-- ── Permanent Top Ticker Bar ───────────────────────── -->
+<!-- ── Permanent Top Ticker Bar ──────────────────────────────────────── -->
 <div class="top-ticker" id="topTicker">
   <div class="top-ticker-inner">
     <?php
@@ -37,6 +37,7 @@ $page = $uri === '' ? 'home' : $uri;
     <!-- Logo -->
     <a href="/" class="logo">
       <div class="logo-mark">
+        <!-- Inline SVG logo icon -->
         <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect x="2" y="10" width="16" height="10" rx="2" fill="white" opacity=".95"/>
           <path d="M18 13h4l3 3v4h-7v-7z" fill="white" opacity=".85"/>

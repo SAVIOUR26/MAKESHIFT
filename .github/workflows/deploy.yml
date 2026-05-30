@@ -1,21 +1,23 @@
-name: Deploy to makeshiftlogistics.com via FTP
+name: Deploy to Production
 
 on:
   push:
     branches:
       - main
-  workflow_dispatch:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
 
 jobs:
-  ftp-deploy:
-    name: Upload files to hosting
+  deploy:
+    name: FTP Deploy
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.pull_request.merged == true)
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
 
       - name: Deploy via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -23,9 +25,10 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          server-dir: ${{ secrets.FTP_DIR }}/
-          local-dir: ./
+          server-dir: ${{ secrets.FTP_DIR }}
           exclude: |
             **/.git*
             **/.git*/**
+            **/node_modules/**
+            .claude/**
             README.md

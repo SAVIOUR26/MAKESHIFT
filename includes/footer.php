@@ -2,6 +2,7 @@
   <div class="container">
     <div class="footer-grid">
 
+      <!-- Brand column -->
       <div class="footer-brand">
         <a href="/" class="logo">
           <div class="logo-mark">
@@ -27,6 +28,7 @@
         </div>
       </div>
 
+      <!-- Quick Links -->
       <div class="footer-col">
         <h5>Quick Links</h5>
         <ul>
@@ -38,6 +40,7 @@
         </ul>
       </div>
 
+      <!-- Services -->
       <div class="footer-col">
         <h5>Services</h5>
         <ul>
@@ -50,24 +53,38 @@
         </ul>
       </div>
 
+      <!-- Contact -->
       <div class="footer-col">
         <h5>Contact Us</h5>
+
         <div class="footer-contact-item">
           <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-          <div class="info"><strong>Office Address</strong>Kiwatule, Nakawa Division<br>Kampala, Central Uganda</div>
+          <div class="info">
+            <strong>Office Address</strong>
+            Kiwatule, Nakawa Division<br>Kampala, Central Uganda
+          </div>
         </div>
+
         <div class="footer-contact-item">
           <div class="icon"><i class="fas fa-envelope"></i></div>
-          <div class="info"><strong>Email Us</strong>info@makeshiftlogistics.com</div>
+          <div class="info">
+            <strong>Email Us</strong>
+            info@makeshiftlogistics.com
+          </div>
         </div>
+
         <div class="footer-contact-item">
           <div class="icon"><i class="fas fa-mail-bulk"></i></div>
-          <div class="info"><strong>Postal Address</strong>P.O. Box 191331, Kampala GPO</div>
+          <div class="info">
+            <strong>Postal Address</strong>
+            P.O. Box 191331, Kampala GPO
+          </div>
         </div>
+
       </div>
 
-    </div>
-  </div>
+    </div><!-- /footer-grid -->
+  </div><!-- /container -->
 
   <div class="container">
     <div class="footer-bottom">
@@ -77,7 +94,10 @@
   </div>
 </footer>
 
+<!-- Scroll-to-top -->
 <button id="scrollTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<!-- JS -->
 <script src="js/main.js"></script>
 </body>
 </html>
