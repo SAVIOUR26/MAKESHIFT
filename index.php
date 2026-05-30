@@ -32,10 +32,10 @@ require 'includes/nav.php';
       </p>
 
       <div class="hero-actions">
-        <a href="/services" class="btn btn-primary btn-lg">
+        <a href="services.php" class="btn btn-primary btn-lg">
           <i class="fas fa-boxes-stacked"></i> Explore Services
         </a>
-        <a href="/contact" class="btn btn-outline btn-lg">
+        <a href="contact.php" class="btn btn-outline btn-lg">
           <i class="fas fa-paper-plane"></i> Get a Quote
         </a>
       </div>
@@ -121,8 +121,24 @@ require 'includes/nav.php';
         <circle cx="510" cy="40" r="16" fill="#0d1f3c"/>
       </svg>
 
-      <!-- Truck + Road grouped so wheels sit on road -->
-      <div class="truck-road-group">
+      <!-- Road (infinite scroll) -->
+      <div class="road-wrap">
+        <svg class="road-svg" viewBox="0 0 560 90" preserveAspectRatio="xMidYMid slice">
+          <rect x="0" y="0" width="560" height="90" fill="#0f2a4a"/>
+          <rect x="0" y="0" width="560" height="5"  fill="#1a3a5c"/>
+          <!-- Dashes animate via CSS translateX on a doubled set -->
+          <g class="road-dashes">
+            <rect x="0"   y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
+            <rect x="140" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
+            <rect x="280" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
+            <rect x="420" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
+            <rect x="560" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
+            <rect x="700" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
+            <rect x="840" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
+            <rect x="980" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
+          </g>
+        </svg>
+      </div>
 
       <!-- Animated Truck -->
       <div class="truck-anim" id="animTruck">
@@ -236,46 +252,21 @@ require 'includes/nav.php';
         </svg>
       </div>
 
-      <!-- Road (infinite scroll) — sits directly below truck -->
-      <div class="road-wrap">
-        <svg class="road-svg" viewBox="0 0 560 90" preserveAspectRatio="xMidYMid slice">
-          <rect x="0" y="0" width="560" height="90" fill="#0f2a4a"/>
-          <rect x="0" y="0" width="560" height="5"  fill="#1a3a5c"/>
-          <g class="road-dashes">
-            <rect x="0"   y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
-            <rect x="140" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
-            <rect x="280" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
-            <rect x="420" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
-            <rect x="560" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
-            <rect x="700" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
-            <rect x="840" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
-            <rect x="980" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
-          </g>
-        </svg>
-      </div>
-
-      </div><!-- /truck-road-group -->
-
     </div>
   </div>
 
   <!-- Animated hero styles -->
   <style>
-    /* Scene wrapper — flex col pushes truck+road to bottom */
+    /* Scene wrapper */
     .scene-wrap {
       width: 100%; height: 100%;
+      display: flex; flex-direction: column;
+      align-items: flex-end; justify-content: flex-end;
       position: relative; overflow: hidden;
-      display: flex; flex-direction: column; justify-content: flex-end;
     }
     .skyline {
       position: absolute; bottom: 90px; left: 0; right: 0;
       width: 100%; pointer-events: none;
-    }
-
-    /* Truck + road as normal-flow unit, no absolute positioning */
-    .truck-road-group {
-      width: 100%; flex-shrink: 0;
-      display: flex; flex-direction: column; align-items: center;
     }
 
     /* Clouds */
@@ -304,7 +295,7 @@ require 'includes/nav.php';
 
     /* Road */
     .road-wrap {
-      width: 100%; flex-shrink: 0; line-height: 0;
+      width: 100%; flex-shrink: 0;
     }
     .road-svg { display: block; width: 100%; }
     .road-dashes {
@@ -315,20 +306,22 @@ require 'includes/nav.php';
       to   { transform: translateX(-140px); }
     }
 
-    /* Truck — fills full width, overlaps road top by 16px */
+    /* Truck */
     .truck-anim {
-      width: 100%;
-      margin-bottom: -16px;
+      position: absolute;
+      bottom: 22px; left: 50%;
+      transform: translateX(-55%);
+      width: 85%; max-width: 420px;
       animation: truckBounce 0.35s ease-in-out infinite alternate,
                  truckEntry  1.2s cubic-bezier(.22,1,.36,1) both;
     }
     @keyframes truckEntry {
-      from { transform: translateX(80%); opacity: 0; }
-      to   { transform: translateX(0);   opacity: 1; }
+      from { transform: translateX(-55%) translateX(120%); opacity: 0; }
+      to   { transform: translateX(-55%); opacity: 1; }
     }
     @keyframes truckBounce {
-      from { transform: translateY(0); }
-      to   { transform: translateY(-4px); }
+      from { transform: translateX(-55%) translateY(0px); }
+      to   { transform: translateX(-55%) translateY(-3px); }
     }
 
     /* Wheel spin */
@@ -376,6 +369,26 @@ require 'includes/nav.php';
   </style>
 
 </section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TICKER
+════════════════════════════════════════════════════════════ -->
+<div class="ticker">
+  <div class="ticker-inner">
+    <?php
+    $items = [
+      'Freight Transportation','Warehousing & Storage','Supply Chain Management',
+      'Last-Mile Delivery','General Supplies','Customs Clearance','Fleet Services',
+      'Freight Transportation','Warehousing & Storage','Supply Chain Management',
+      'Last-Mile Delivery','General Supplies','Customs Clearance','Fleet Services',
+    ];
+    foreach ($items as $item):
+    ?>
+    <span class="ticker-item"><i class="fas fa-truck"></i><?= $item ?></span>
+    <?php endforeach; ?>
+  </div>
+</div>
+
 
 <!-- ═══════════════════════════════════════════════════════════
      ABOUT STRIP
@@ -436,7 +449,7 @@ require 'includes/nav.php';
         <div class="eyebrow-tag">
           <i class="fas fa-award"></i> About Makeshift Logistics
         </div>
-        <h2>Uganda's Reliable Logistics &amp; Supply Partner</h2>
+        <h2>Uganda's Reliable Logistics & Supply Partner</h2>
         <p class="lead">
           Makeshift Logistics (U) Limited was founded with a singular commitment:
           to provide businesses across Uganda and East Africa with dependable,
@@ -445,7 +458,7 @@ require 'includes/nav.php';
         <p>
           Headquartered in Kiwatule, Nakawa Division, Kampala, we combine local
           expertise with modern logistics practices to serve our clients with
-          integrity and precision &mdash; whether it's a single pallet or a full fleet movement.
+          integrity and precision — whether it's a single pallet or a full fleet movement.
         </p>
         <ul class="check-list">
           <li><i class="fas fa-circle-check"></i> Registered under The Companies Act 2012, Republic of Uganda</li>
@@ -453,7 +466,7 @@ require 'includes/nav.php';
           <li><i class="fas fa-circle-check"></i> Fully compliant with Uganda Revenue Authority &amp; customs regulations</li>
           <li><i class="fas fa-circle-check"></i> Dedicated fleet and partner network for reliable last-mile delivery</li>
         </ul>
-        <a href="/about" class="btn btn-navy">
+        <a href="about.php" class="btn btn-navy">
           <i class="fas fa-arrow-right"></i> Learn More About Us
         </a>
       </div>
@@ -490,7 +503,7 @@ require 'includes/nav.php';
         <div class="service-icon"><i class="<?= $icon ?>"></i></div>
         <h3><?= $title ?></h3>
         <p><?= $desc ?></p>
-        <a href="/services" class="learn-more">
+        <a href="services.php" class="learn-more">
           Learn More <i class="fas fa-arrow-right"></i>
         </a>
       </div>
@@ -539,7 +552,7 @@ require 'includes/nav.php';
     <div class="section-header fade-up">
       <div class="eyebrow"><i class="fas fa-star"></i> Why Makeshift</div>
       <h2>The Makeshift Difference</h2>
-      <p>We don't just move cargo &mdash; we build lasting partnerships built on trust, speed, and results.</p>
+      <p>We don't just move cargo — we build lasting partnerships built on trust, speed, and results.</p>
     </div>
 
     <div class="grid-4">
@@ -552,7 +565,7 @@ require 'includes/nav.php';
         ['fas fa-network-wired',  'Wide Coverage',          'An expansive network covering Kampala and districts throughout Uganda for reliable reach.'],
         ['fas fa-leaf',           'Compliant Operations',   'Fully licensed, URA-registered, and operating in compliance with all Ugandan logistics regulations.'],
         ['fas fa-handshake',      'Trusted Partnerships',   'We work as an extension of your team, not just a vendor. Long-term relationships are our goal.'],
-        ['fas fa-chart-line',     'Scalable Solutions',     'From SMEs to large enterprises &mdash; our services scale with your business as you grow.'],
+        ['fas fa-chart-line',     'Scalable Solutions',     'From SMEs to large enterprises — our services scale with your business as you grow.'],
       ];
       foreach ($reasons as [$icon,$title,$desc]):
       ?>
@@ -652,10 +665,10 @@ require 'includes/nav.php';
     <h2>Ready to Move Your Business Forward?</h2>
     <p>Contact Makeshift Logistics today for a free quote and discover how we can streamline your supply chain across Uganda.</p>
     <div class="actions">
-      <a href="/contact" class="btn btn-primary btn-lg">
+      <a href="contact.php" class="btn btn-primary btn-lg">
         <i class="fas fa-paper-plane"></i> Get a Free Quote
       </a>
-      <a href="/services" class="btn btn-outline btn-lg">
+      <a href="services.php" class="btn btn-outline btn-lg">
         <i class="fas fa-boxes-stacked"></i> View All Services
       </a>
     </div>
