@@ -121,24 +121,8 @@ require 'includes/nav.php';
         <circle cx="510" cy="40" r="16" fill="#0d1f3c"/>
       </svg>
 
-      <!-- Road (infinite scroll) -->
-      <div class="road-wrap">
-        <svg class="road-svg" viewBox="0 0 560 90" preserveAspectRatio="xMidYMid slice">
-          <rect x="0" y="0" width="560" height="90" fill="#0f2a4a"/>
-          <rect x="0" y="0" width="560" height="5"  fill="#1a3a5c"/>
-          <!-- Dashes animate via CSS translateX on a doubled set -->
-          <g class="road-dashes">
-            <rect x="0"   y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
-            <rect x="140" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
-            <rect x="280" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
-            <rect x="420" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
-            <rect x="560" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
-            <rect x="700" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
-            <rect x="840" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
-            <rect x="980" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
-          </g>
-        </svg>
-      </div>
+      <!-- Truck + Road grouped so wheels sit on road -->
+      <div class="truck-road-group">
 
       <!-- Animated Truck -->
       <div class="truck-anim" id="animTruck">
@@ -252,21 +236,46 @@ require 'includes/nav.php';
         </svg>
       </div>
 
+      <!-- Road (infinite scroll) — sits directly below truck -->
+      <div class="road-wrap">
+        <svg class="road-svg" viewBox="0 0 560 90" preserveAspectRatio="xMidYMid slice">
+          <rect x="0" y="0" width="560" height="90" fill="#0f2a4a"/>
+          <rect x="0" y="0" width="560" height="5"  fill="#1a3a5c"/>
+          <g class="road-dashes">
+            <rect x="0"   y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
+            <rect x="140" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
+            <rect x="280" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
+            <rect x="420" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
+            <rect x="560" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
+            <rect x="700" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
+            <rect x="840" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
+            <rect x="980" y="38" width="80" height="8" rx="4" fill="rgba(255,255,255,.15)"/>
+          </g>
+        </svg>
+      </div>
+
+      </div><!-- /truck-road-group -->
+
     </div>
   </div>
 
   <!-- Animated hero styles -->
   <style>
-    /* Scene wrapper */
+    /* Scene wrapper — flex col so truck+road naturally sit at bottom */
     .scene-wrap {
       width: 100%; height: 100%;
-      display: flex; flex-direction: column;
-      align-items: stretch; justify-content: flex-end;
       position: relative; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: flex-end;
     }
     .skyline {
-      position: absolute; bottom: 60px; left: 0; right: 0;
+      position: absolute; bottom: 90px; left: 0; right: 0;
       width: 100%; pointer-events: none;
+    }
+
+    /* Truck + road as a normal-flow unit at the bottom */
+    .truck-road-group {
+      width: 100%; flex-shrink: 0;
+      display: flex; flex-direction: column; align-items: center;
     }
 
     /* Clouds */
@@ -295,7 +304,7 @@ require 'includes/nav.php';
 
     /* Road */
     .road-wrap {
-      width: 100%; flex-shrink: 0;
+      width: 100%; flex-shrink: 0; line-height: 0;
     }
     .road-svg { display: block; width: 100%; }
     .road-dashes {
@@ -306,22 +315,20 @@ require 'includes/nav.php';
       to   { transform: translateX(-140px); }
     }
 
-    /* Truck — vertically centered in hero visual */
+    /* Truck — fills full width of the visual panel */
     .truck-anim {
-      position: absolute;
-      top: 50%; left: 50%;
-      transform: translate(-50%, -38%);
-      width: 92%; max-width: 460px;
+      width: 100%;
+      margin-bottom: -16px; /* tuck wheels into road top */
       animation: truckBounce 0.35s ease-in-out infinite alternate,
                  truckEntry  1.2s cubic-bezier(.22,1,.36,1) both;
     }
     @keyframes truckEntry {
-      from { transform: translate(80%, -38%); opacity: 0; }
-      to   { transform: translate(-50%, -38%); opacity: 1; }
+      from { transform: translateX(80%); opacity: 0; }
+      to   { transform: translateX(0);   opacity: 1; }
     }
     @keyframes truckBounce {
-      from { transform: translate(-50%, -38%); }
-      to   { transform: translate(-50%, -41%); }
+      from { transform: translateY(0); }
+      to   { transform: translateY(-4px); }
     }
 
     /* Wheel spin */
