@@ -3,6 +3,23 @@ $uri  = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 $page = $uri === '' ? 'home' : $uri;
 ?>
 
+<!-- ── Permanent Top Ticker Bar ───────────────────────── -->
+<div class="top-ticker" id="topTicker">
+  <div class="top-ticker-inner">
+    <?php
+    $items = [
+      'Freight Transportation','Warehousing & Storage','Supply Chain Management',
+      'Last-Mile Delivery','General Supplies','Customs Clearance','Fleet Services',
+      'Freight Transportation','Warehousing & Storage','Supply Chain Management',
+      'Last-Mile Delivery','General Supplies','Customs Clearance','Fleet Services',
+    ];
+    foreach ($items as $item):
+    ?>
+    <span class="top-ticker-item"><i class="fas fa-truck"></i><?= $item ?></span>
+    <?php endforeach; ?>
+  </div>
+</div>
+
 <!-- Mobile Nav Overlay -->
 <nav class="mobile-nav" id="mobileNav">
   <button class="close-nav" aria-label="Close"><i class="fas fa-times"></i></button>
