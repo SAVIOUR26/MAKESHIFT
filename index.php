@@ -426,8 +426,8 @@ require 'includes/nav.php';
             <polygon points="200,0 225,8 200,16" fill="#F47920" opacity=".8"/>
           </svg>
           <div class="about-badge">
-            <div class="num">2025</div>
-            <div class="lbl">Est. Kampala</div>
+            <div class="num">Est. 2025</div>
+            <div class="lbl">Kampala, Uganda</div>
           </div>
         </div>
       </div>
