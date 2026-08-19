@@ -436,7 +436,7 @@ require 'includes/nav.php';
         <div class="eyebrow-tag">
           <i class="fas fa-award"></i> About Makeshift Logistics
         </div>
-        <h2>Uganda's Reliable Logistics & Supply Partner</h2>
+        <h2>Uganda's Reliable Logistics &amp; Supply Partner</h2>
         <p class="lead">
           Makeshift Logistics (U) Limited was founded with a singular commitment:
           to provide businesses across Uganda and East Africa with dependable,
@@ -464,39 +464,161 @@ require 'includes/nav.php';
 
 
 <!-- ═══════════════════════════════════════════════════════════
-     SERVICES OVERVIEW
+     SERVICES — 6 ALTERNATING LANDING SECTIONS
 ════════════════════════════════════════════════════════════ -->
-<section class="services section">
+
+<!-- Header intro -->
+<section class="svc-intro section">
   <div class="container">
     <div class="section-header fade-up">
       <div class="eyebrow"><i class="fas fa-truck-fast"></i> What We Do</div>
       <h2>End-to-End Logistics &amp; Supply Solutions</h2>
       <p>From freight forwarding to last-mile delivery, we handle every link of your supply chain with precision and care.</p>
     </div>
+  </div>
+</section>
 
-    <div class="grid-3">
-      <?php
-      $services = [
-        ['fas fa-truck-moving',    'Freight &amp; Cargo Transport',     'Reliable road freight and cargo transportation across Uganda and into neighbouring East African countries with our managed fleet.'],
-        ['fas fa-warehouse',       'Warehousing &amp; Storage',         'Secure, climate-aware storage facilities in Kampala with real-time inventory management for short and long-term needs.'],
-        ['fas fa-diagram-project', 'Supply Chain Management',           'End-to-end supply chain consulting and management: procurement, logistics coordination, and fulfilment optimisation.'],
-        ['fas fa-route',           'Last-Mile Delivery',                'Efficient urban and peri-urban delivery networks ensuring your goods reach the final destination safely and on time.'],
-        ['fas fa-boxes-stacked',   'General Supplies &amp; Procurement','Sourcing and supplying a wide range of goods for businesses, institutions, and NGOs operating across Uganda.'],
-        ['fas fa-file-contract',   'Customs Clearance &amp; Forwarding','Professional handling of customs documentation, URA compliance, and import/export clearance for smooth border crossings.'],
-      ];
-      foreach ($services as $i => [$icon, $title, $desc]):
-      ?>
-      <div class="service-card fade-up">
-        <div class="service-icon"><i class="<?= $icon ?>"></i></div>
-        <h3><?= $title ?></h3>
-        <p><?= $desc ?></p>
-        <a href="/services" class="learn-more">
-          Learn More <i class="fas fa-arrow-right"></i>
-        </a>
+<!-- 1. Freight & Cargo Transport -->
+<section class="svc-section">
+  <div class="container">
+    <div class="svc-row fade-up">
+      <div class="svc-visual svc-visual--orange">
+        <div class="svc-icon-wrap"><i class="fas fa-truck-moving"></i></div>
+        <div class="svc-bg-label">01</div>
       </div>
-      <?php endforeach; ?>
+      <div class="svc-body">
+        <div class="eyebrow"><i class="fas fa-truck-moving"></i> Service 01</div>
+        <h2>Freight &amp; Cargo Transport</h2>
+        <p>Reliable road freight and cargo transportation across Uganda and into neighbouring East African countries. Our managed fleet ensures your goods move safely, on schedule, and with full visibility from pickup to drop-off.</p>
+        <ul class="svc-points">
+          <li><i class="fas fa-check-circle"></i> Long-haul &amp; cross-border freight</li>
+          <li><i class="fas fa-check-circle"></i> Refrigerated &amp; hazmat capable</li>
+          <li><i class="fas fa-check-circle"></i> Real-time cargo tracking</li>
+          <li><i class="fas fa-check-circle"></i> Fully insured shipments</li>
+        </ul>
+        <a href="/services" class="btn btn-primary">Explore This Service <i class="fas fa-arrow-right"></i></a>
+      </div>
     </div>
+  </div>
+</section>
 
+<!-- 2. Warehousing & Storage -->
+<section class="svc-section svc-section--alt">
+  <div class="container">
+    <div class="svc-row fade-up">
+      <div class="svc-body">
+        <div class="eyebrow"><i class="fas fa-warehouse"></i> Service 02</div>
+        <h2>Warehousing &amp; Storage</h2>
+        <p>Secure, climate-aware storage facilities in Kampala with real-time inventory management for short and long-term needs. We handle receiving, shelving, picking, and dispatch so your supply chain stays lean and responsive.</p>
+        <ul class="svc-points">
+          <li><i class="fas fa-check-circle"></i> Climate-controlled bays</li>
+          <li><i class="fas fa-check-circle"></i> 24/7 CCTV &amp; security</li>
+          <li><i class="fas fa-check-circle"></i> Live inventory dashboard</li>
+          <li><i class="fas fa-check-circle"></i> Short &amp; long-term leasing</li>
+        </ul>
+        <a href="/services" class="btn btn-primary">Explore This Service <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="svc-visual svc-visual--navy">
+        <div class="svc-icon-wrap"><i class="fas fa-warehouse"></i></div>
+        <div class="svc-bg-label">02</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Supply Chain Management -->
+<section class="svc-section">
+  <div class="container">
+    <div class="svc-row fade-up">
+      <div class="svc-visual svc-visual--orange">
+        <div class="svc-icon-wrap"><i class="fas fa-diagram-project"></i></div>
+        <div class="svc-bg-label">03</div>
+      </div>
+      <div class="svc-body">
+        <div class="eyebrow"><i class="fas fa-diagram-project"></i> Service 03</div>
+        <h2>Supply Chain Management</h2>
+        <p>End-to-end supply chain consulting and management covering procurement, logistics coordination, and fulfilment optimisation. We analyse your existing chain, identify bottlenecks, and deploy solutions that reduce cost and improve speed.</p>
+        <ul class="svc-points">
+          <li><i class="fas fa-check-circle"></i> Procurement &amp; vendor sourcing</li>
+          <li><i class="fas fa-check-circle"></i> Fulfilment optimisation</li>
+          <li><i class="fas fa-check-circle"></i> Demand forecasting support</li>
+          <li><i class="fas fa-check-circle"></i> KPI reporting &amp; analytics</li>
+        </ul>
+        <a href="/services" class="btn btn-primary">Explore This Service <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Last-Mile Delivery -->
+<section class="svc-section svc-section--alt">
+  <div class="container">
+    <div class="svc-row fade-up">
+      <div class="svc-body">
+        <div class="eyebrow"><i class="fas fa-route"></i> Service 04</div>
+        <h2>Last-Mile Delivery</h2>
+        <p>Efficient urban and peri-urban delivery networks ensuring your goods reach the final destination safely and on time. Our last-mile fleet covers Kampala city and surrounding districts with same-day and scheduled delivery options.</p>
+        <ul class="svc-points">
+          <li><i class="fas fa-check-circle"></i> Same-day city delivery</li>
+          <li><i class="fas fa-check-circle"></i> Peri-urban route coverage</li>
+          <li><i class="fas fa-check-circle"></i> Proof-of-delivery confirmation</li>
+          <li><i class="fas fa-check-circle"></i> Bulk &amp; e-commerce fulfilment</li>
+        </ul>
+        <a href="/services" class="btn btn-primary">Explore This Service <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="svc-visual svc-visual--navy">
+        <div class="svc-icon-wrap"><i class="fas fa-route"></i></div>
+        <div class="svc-bg-label">04</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. General Supplies & Procurement -->
+<section class="svc-section">
+  <div class="container">
+    <div class="svc-row fade-up">
+      <div class="svc-visual svc-visual--orange">
+        <div class="svc-icon-wrap"><i class="fas fa-boxes-stacked"></i></div>
+        <div class="svc-bg-label">05</div>
+      </div>
+      <div class="svc-body">
+        <div class="eyebrow"><i class="fas fa-boxes-stacked"></i> Service 05</div>
+        <h2>General Supplies &amp; Procurement</h2>
+        <p>Sourcing and supplying a wide range of goods for businesses, institutions, and NGOs operating across Uganda. We leverage our supplier network to get you quality products at competitive prices, delivered directly to your door.</p>
+        <ul class="svc-points">
+          <li><i class="fas fa-check-circle"></i> Office &amp; industrial supplies</li>
+          <li><i class="fas fa-check-circle"></i> NGO &amp; institutional procurement</li>
+          <li><i class="fas fa-check-circle"></i> Competitive supplier network</li>
+          <li><i class="fas fa-check-circle"></i> Consolidated bulk orders</li>
+        </ul>
+        <a href="/services" class="btn btn-primary">Explore This Service <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Customs Clearance & Forwarding -->
+<section class="svc-section svc-section--alt">
+  <div class="container">
+    <div class="svc-row fade-up">
+      <div class="svc-body">
+        <div class="eyebrow"><i class="fas fa-file-contract"></i> Service 06</div>
+        <h2>Customs Clearance &amp; Forwarding</h2>
+        <p>Professional handling of customs documentation, URA compliance, and import/export clearance for smooth border crossings. Our experienced clearance agents navigate regulations so your cargo clears fast with no surprises.</p>
+        <ul class="svc-points">
+          <li><i class="fas fa-check-circle"></i> URA-registered clearing agents</li>
+          <li><i class="fas fa-check-circle"></i> Import &amp; export documentation</li>
+          <li><i class="fas fa-check-circle"></i> Duty &amp; tax advisory</li>
+          <li><i class="fas fa-check-circle"></i> East Africa border crossings</li>
+        </ul>
+        <a href="/services" class="btn btn-primary">Explore This Service <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="svc-visual svc-visual--navy">
+        <div class="svc-icon-wrap"><i class="fas fa-file-contract"></i></div>
+        <div class="svc-bg-label">06</div>
+      </div>
+    </div>
   </div>
 </section>
 
