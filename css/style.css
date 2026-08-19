@@ -408,56 +408,83 @@ p  { font-size: 1rem; color: var(--grey); }
   color: var(--orange); margin-top: 3px; flex-shrink: 0;
 }
 
-/* ── Services ─────────────────────────────────────────────── */
-.services { background: var(--white); }
+/* ── Services — alternating landing sections ──────────────── */
+.svc-intro { background: var(--white); padding-bottom: 0; }
 
-.service-card {
+.svc-section {
+  padding: 100px 0;
   background: var(--white);
-  border: 1px solid var(--border);
+}
+.svc-section--alt {
+  background: var(--offwhite);
+}
+
+.svc-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+/* Visual panel */
+.svc-visual {
+  position: relative;
   border-radius: var(--radius-lg);
-  padding: 36px 28px;
-  transition: var(--transition);
-  position: relative; overflow: hidden;
-}
-.service-card::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0;
-  height: 4px; background: var(--orange);
-  transform: scaleX(0); transform-origin: left;
-  transition: var(--transition);
-}
-.service-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: transparent;
-}
-.service-card:hover::before { transform: scaleX(1); }
-
-.service-icon {
-  width: 64px; height: 64px; border-radius: 14px;
-  background: rgba(244,121,32,.1);
+  min-height: 380px;
   display: flex; align-items: center; justify-content: center;
-  margin-bottom: 22px;
-  transition: var(--transition);
+  overflow: hidden;
 }
-.service-card:hover .service-icon {
-  background: var(--orange);
+.svc-visual--orange {
+  background: linear-gradient(135deg, var(--orange) 0%, #d4600a 100%);
 }
-.service-icon i {
-  font-size: 1.6rem; color: var(--orange);
-  transition: var(--transition);
+.svc-visual--navy {
+  background: linear-gradient(135deg, var(--navy-dark) 0%, #0a1628 100%);
 }
-.service-card:hover .service-icon i { color: var(--white); }
 
-.service-card h3 { font-size: 1.2rem; margin-bottom: 12px; }
-.service-card p  { font-size: .9rem; line-height: 1.65; }
-
-.service-card .learn-more {
-  display: inline-flex; align-items: center; gap: 6px;
-  color: var(--orange); font-size: .85rem; font-weight: 600;
-  margin-top: 18px; transition: var(--transition);
+.svc-icon-wrap {
+  width: 130px; height: 130px;
+  background: rgba(255,255,255,.15);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; z-index: 1;
+  box-shadow: 0 0 0 24px rgba(255,255,255,.07);
 }
-.service-card:hover .learn-more { gap: 10px; }
+.svc-icon-wrap i {
+  font-size: 3.6rem;
+  color: var(--white);
+}
+
+.svc-bg-label {
+  position: absolute; bottom: -20px; right: -10px;
+  font-family: var(--font-head);
+  font-size: 9rem; font-weight: 900; line-height: 1;
+  color: rgba(255,255,255,.08);
+  user-select: none; pointer-events: none;
+}
+
+/* Content panel */
+.svc-body { }
+.svc-body .eyebrow { margin-bottom: 14px; }
+.svc-body h2 {
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  color: var(--navy-dark); margin-bottom: 18px;
+}
+.svc-body > p {
+  color: var(--steel); font-size: 1.05rem; line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.svc-points {
+  list-style: none; padding: 0; margin: 0 0 36px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px;
+}
+.svc-points li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: .9rem; font-weight: 500; color: var(--navy-dark);
+}
+.svc-points li i {
+  color: var(--orange); font-size: .85rem; flex-shrink: 0;
+}
 
 /* ── Why Choose Us ────────────────────────────────────────── */
 .why-us {
@@ -896,6 +923,11 @@ textarea { min-height: 130px; resize: vertical; }
   .contact-grid { grid-template-columns: 1fr; }
   .service-detail { grid-template-columns: 1fr; }
   .service-detail:nth-child(even) .service-detail-visual { order: unset; }
+  .svc-row { grid-template-columns: 1fr; gap: 40px; }
+  .svc-section--alt .svc-visual { order: -1; }
+  .svc-visual { min-height: 260px; }
+  .svc-points { grid-template-columns: 1fr; }
+  .svc-section { padding: 64px 0; }
   .values-grid { grid-template-columns: 1fr 1fr; }
   .hero {
     padding-bottom: 240px; /* room for full-width truck scene */
